@@ -1,0 +1,185 @@
+* {
+  font-size: 14px;
+  cursor: url(./cur.svg), pointer;
+}
+a {
+  color: #179151;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #179151;
+  cursor: url(./cur.svg), pointer;
+}
+nav {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  max-height: 50px;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 3px;
+}
+a {
+  color: #f1f1f1;
+  cursor: pointer;
+  margin: 0 24px;
+}
+.app-head {
+  display: flex;
+  color: #f1f1f1;
+  justify-content: space-between;
+  padding: 14px 40px;
+  border-radius: 25px;
+}
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-height: 100vh;
+  padding: 0;
+  background-color: #000;
+  z-index: -1;
+  cursor: url(./cur.svg), pointer;
+  background-position: center;
+  background: url(./1.svg);
+  background-size: cover;
+  animation-name: ani;
+  animation-direction: alternate-reverse;
+  animation-duration: 23s;
+  animation-iteration-count: infinite;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 18px;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  background-color: #000;
+  cursor: url(./cur.svg), pointer;
+  color: #fff;
+  border: none;
+}
+button:hover {
+  background-color: rgb(23, 23, 23);
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a {
+    color: transparent;
+    background-size: 25px;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    box-shadow: #179151 0px 1px 3px;
+    padding: 20px;
+    transition: all 0.6s;
+  }
+  #home {
+    background-image: url(https://img.icons8.com/ios-glyphs/35/40C057/home-page--v1.png);
+  }
+  #about {
+    background-image: url(https://img.icons8.com/ios-glyphs/35/40C057/info--v1.png);
+  }
+  #sol {
+    background-image: url(https://img.icons8.com/ios-glyphs/35/40C057/apps.png);
+  }
+  #page {
+    background-image: url(https://img.icons8.com/ios-glyphs/35/40C057/dryclean-with-any-solvent-except-trichloroethylene.png);
+  }
+
+  a:hover {
+    background-color: transparent;
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+
+@keyframes ani {
+  0% {
+    background-position: top;
+  }
+  50% {
+    background-position: bottom;
+  }
+  100% {
+    background-position: center;
+  }
+}
+@keyframes ani2 {
+  from {
+  }
+  to {
+  }
+}
+.loader {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  border: 2px solid #179151;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+.loader::after {
+  content: '';
+  box-sizing: border-box;
+  position: absolute;
+  left: 4px;
+  top: 4px;
+  border: 2px solid #fff;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.loader-container {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: #000;
+  z-index: 9999999;
+  display: flex;
+  justify-content: center;
+  animation-name: hide;
+  animation-duration: 3s;
+  animation-iteration-count: 1;
+  animation-fill-mode: backwards;
+  animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+  animation-delay: 2s;
+}
+@keyframes hide {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
