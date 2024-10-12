@@ -2,14 +2,17 @@
   font-size: 14px;
   cursor: url(./cur.svg), pointer;
 }
+
 a {
   color: #179151;
   text-decoration: inherit;
 }
+
 a:hover {
   color: #179151;
   cursor: url(./cur.svg), pointer;
 }
+
 nav {
   position: fixed;
   top: 0;
@@ -20,11 +23,13 @@ nav {
   justify-content: space-around;
   margin-top: 3px;
 }
+
 a {
   color: #f1f1f1;
   cursor: pointer;
   margin: 0 24px;
 }
+
 .app-head {
   display: flex;
   color: #f1f1f1;
@@ -32,6 +37,7 @@ a {
   padding: 14px 40px;
   border-radius: 25px;
 }
+
 body {
   margin: 0;
   display: flex;
@@ -65,9 +71,11 @@ button {
   color: #fff;
   border: none;
 }
+
 button:hover {
   background-color: rgb(23, 23, 23);
 }
+
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
@@ -78,33 +86,40 @@ button:focus-visible {
     color: #213547;
     background-color: #ffffff;
   }
+
   a {
     color: transparent;
     background-size: 25px;
     background-position: center;
     background-repeat: no-repeat;
     border-radius: 50%;
-    box-shadow: #179151 0px 1px 3px;
     padding: 20px;
     transition: all 0.6s;
   }
+
+  a:hover {
+    box-shadow: #179151 0px 1px 3px;
+    background-color: transparent;
+    color: #747bff;
+  }
+
   #home {
     background-image: url(https://img.icons8.com/ios-glyphs/35/40C057/home-page--v1.png);
   }
+
   #about {
     background-image: url(https://img.icons8.com/ios-glyphs/35/40C057/info--v1.png);
   }
+
   #sol {
     background-image: url(https://img.icons8.com/ios-glyphs/35/40C057/apps.png);
   }
+
   #page {
     background-image: url(https://img.icons8.com/ios-glyphs/35/40C057/dryclean-with-any-solvent-except-trichloroethylene.png);
   }
 
-  a:hover {
-    background-color: transparent;
-    color: #747bff;
-  }
+
   button {
     background-color: #f9f9f9;
   }
@@ -114,19 +129,22 @@ button:focus-visible {
   0% {
     background-position: top;
   }
+
   50% {
     background-position: bottom;
   }
+
   100% {
     background-position: center;
   }
 }
+
 @keyframes ani2 {
-  from {
-  }
-  to {
-  }
+  from {}
+
+  to {}
 }
+
 .loader {
   width: 48px;
   height: 48px;
@@ -138,6 +156,7 @@ button:focus-visible {
   box-sizing: border-box;
   animation: rotation 1s linear infinite;
 }
+
 .loader::after {
   content: '';
   box-sizing: border-box;
@@ -154,10 +173,12 @@ button:focus-visible {
   0% {
     transform: rotate(0deg);
   }
+
   100% {
     transform: rotate(360deg);
   }
 }
+
 .loader-container {
   position: absolute;
   top: 0;
@@ -175,10 +196,12 @@ button:focus-visible {
   animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
   animation-delay: 2s;
 }
+
 @keyframes hide {
   0% {
     opacity: 1;
   }
+
   100% {
     opacity: 0;
   }

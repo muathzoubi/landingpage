@@ -1,6 +1,8 @@
 import { useEffect, useState } from 'react';
 import './App.css';
 import PreLoader from './PreLoder';
+import 'react-tooltip/dist/react-tooltip.css'
+import { Tooltip } from 'react-tooltip';
 
 function App() {
   const [show, setShow] = useState(true);
@@ -23,7 +25,7 @@ function App() {
           <img src={'./logo.svg'} className="logo" alt="Vite logo" />
         </div>
         <div className="app-head">
-          <a id="home"></a>
+          <a href='#' data-tooltip-id="home-tooltip"  id="home" data-tooltip-content="Home"></a><Tooltip id="my-tooltip" />
           <a id="sol"></a>
           <a id="page"></a>
           <a id="about"></a>
@@ -41,7 +43,7 @@ function App() {
       <div className="card">
         <button className="btn1" >
           Get Started
-        </button>{' '}
+        </button>
         <button className="btn2" >
           Docs
         </button>
