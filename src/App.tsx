@@ -14,7 +14,6 @@ function App() {
         <img src={'./logo.svg'} className="logo" alt="Vite logo" />
         <button
           className="btn2 mr-auto"
-          onClick={() => setCount((count) => count + 1)}
         >
           Login
         </button>
@@ -40,15 +39,16 @@ function App() {
         streamline your workflow and enhance your solutions.
       </p>
       <div className="card">
-        <button className="btn1" onClick={() => setCount((count) => count + 1)}>
+        <button className="btn1" >
           Get Started
         </button>{' '}
-        <button className="btn2" onClick={() => setCount((count) => count + 1)}>
+        <button className="btn2" >
           Docs
         </button>
       </div>
       <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
+
+      Copyright © {new Date().getFullYear()} Muath Alzoubi®. All rights reserved.
       </p>
     </div>
   );
