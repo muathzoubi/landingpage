@@ -35,7 +35,7 @@ function App() {
           <button className="btn2">Login</button>
         </div>
       </nav>
-      <h1>Vite + React</h1>
+      <h1>Zero Tools</h1>
       <p>
         Potential of your applications with our robust suite of APIs designed to
         streamline your workflow and enhance your solutions.
