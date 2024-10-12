@@ -6,11 +6,20 @@ import { Tooltip } from 'react-tooltip';
 
 function App() {
   const [show, setShow] = useState(true);
+  const [x, setX] = useState(0);
+  const [y, setY] = useState(0);
   useEffect(() => {
     setTimeout(() => setShow(false), 3500);
   }, []);
   return (
-    <div>
+    <div   onMouseMove={(e)=>{
+      setX(e.pageX)
+      setY(e.pageY)
+    }}>
+    <div 
+   style={{position:'fixed',top:y-100,right:x+100,left:x-100,bottom:y,filter:'blur(20px)',
+   background:'repeating-linear-gradient(90deg,#00dc801a 0,#1de0b233 50%,#36e4db2a)',height:150,width:150,borderRadius:'50%'}}>
+    </div>
       <PreLoader show={show} />
       <div className="nav">
         <img src={'./logo.svg'} className="logo" alt="Vite logo" />
