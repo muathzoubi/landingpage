@@ -17,8 +17,8 @@ function App() {
       setY(e.pageY)
     }}>
     <div 
-   style={{position:'fixed',top:y-100,right:x+100,left:x-100,bottom:y,filter:'blur(20px)',
-   background:'repeating-linear-gradient(90deg,#00dc801a 0,#1de0b233 50%,#36e4db2a)',height:150,width:150,borderRadius:'50%'}}>
+   style={{position:'fixed',top:y-40,right:x+100,left:x-40,bottom:y,filter:'blur(10px)',
+   background:'repeating-linear-gradient(90deg,#00dc801a 0,#1de0b233 50%,#36e4db2a)',height:80,width:80 ,borderRadius:'50%'}}>
     </div>
       <PreLoader show={show} />
       <div className="nav">
